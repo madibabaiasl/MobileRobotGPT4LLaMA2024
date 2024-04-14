@@ -1,0 +1,138 @@
+int STBY = 3;
+int ENA=5;
+int ENB=6;
+int IN1=7;
+int IN2=8;
+int IN3=9;
+int IN4=11;
+
+void setup() {
+  //Initialize 9600 baud rate
+  Serial.begin(9600);
+
+  //Setting up all motor control pins
+  pinMode(ENA,OUTPUT);
+  pinMode(ENB,OUTPUT);
+  pinMode(IN1,OUTPUT);
+  pinMode(IN2,OUTPUT);
+  pinMode(IN3,OUTPUT);
+  pinMode(IN4,OUTPUT);
+  pinMode(STBY, OUTPUT);
+
+  //Setting motors at max 200RPM
+  analogWrite(ENA,255);
+  analogWrite(ENB,255);
+  digitalWrite(STBY, LOW);
+}
+
+void forward(float userDistance){
+  //Sets motors to go forwards
+  digitalWrite(STBY, HIGH);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, HIGH);
+
+  //Applying kinematics to relate distance and delay time
+  int trueDelay = (userDistance/100)*1000; //100 cm/s max velocity by calculations
+  delay(trueDelay);
+ 
+  //Stops moving after going proper distance
+  stop();
+  delay(10);
+}
+
+void backward(float userDistance){ //See forward() comments for code logic
+  digitalWrite(STBY, HIGH);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  int trueDelay = (userDistance/100)*1000; //100 cm/s max
+  delay(trueDelay);
+  stop();
+  delay(10);
+}
+
+void left(float userAngle){
+  //Sets motors to cause ccw rotation
+  digitalWrite(STBY, HIGH);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+
+  //Applying kinematics to relate change in angle versus delay time
+  int trueDelay = userAngle*2.35;
+  delay(trueDelay);
+
+  //Stops motor function after reaching inputted angle
+  stop();
+  delay(10);
+}
+void right(float userAngle){ //See left() comments for code logic
+  digitalWrite(STBY, HIGH);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  int trueDelay = userAngle*2.35;
+  delay(trueDelay);
+  stop();
+  delay(10);
+}
+
+void stop(){
+  //Sets standby low and motor pins low for absolute stop
+  digitalWrite(STBY, LOW);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+}
+void loop() {
+
+  //Begin by reading the Serial input from the Raspberry Pi/Pico board
+    String inputString = Serial.readStringUntil('\n'); // Read the input string until newline character
+    Serial.println(inputString);
+   
+    int commaIndex = inputString.indexOf(','); // Find the index of the comma
+   
+    if (commaIndex != -1) { // If comma is found
+      String direction = inputString.substring(0, commaIndex); // Extract the directional input (f,b,l,r)
+      String distance = inputString.substring(commaIndex + 1); // Extract the distance input (in cm for f,b; in degrees for l,r)
+      Serial.println(direction);
+      Serial.println(distance);
+     
+      //f,b,l, or r will be communicated to the Arduino via Pi/Pico Serial
+      //Pi/Pico sends proper Serial command via NLM command
+      if(direction == "f"){
+        stop();
+        delay(10);
+        int distanceVal = distance.toInt();
+        forward(distanceVal);
+        delay(10);
+      }
+      else if(direction == "b"){
+        stop();
+        delay(10);
+        int distanceVal = distance.toInt();
+        backward(distanceVal);
+        delay(10);
+      }
+      else if(direction == "l"){
+        stop();
+        delay(10);
+        int angleVal = distance.toInt();
+        left(angleVal);
+        delay(10);
+      }
+      else if(direction == "r"){
+        stop();
+        delay(10);
+        int angleVal = distance.toInt();
+        right(angleVal);
+        delay(10);
+      }
+      else if(direction == "s"){
+        stop();
+        delay(1000);
+      }
+    }
+}
