@@ -11,6 +11,10 @@ Libraries and their respective dependencies build from:
 
 LLM Implementation: llama.cpp (llama-2-7b-chatQ5_K_S)
 
+OpenAI Implementation: openai (1.12.0) json (2.0.9)
+
+Offline Speech Recogniton: vosk (0.3.45) pyaudio (0.2.11)
+
 # Usage
 To use the system, follow these steps:
 
