@@ -20,6 +20,12 @@ Audio Speech-to-Text Configuration: We will provide instruction assuming impleme
 
 OpenAI API Key Configuration: Again, after installing the required packages listed, navigate to OpenAI API webpage. If prompted to log in or create an account for the service, do so. Afterward, follow the prompts to generate an agent key, and save this key as we will need it for API use within our program. If you have not already, create a ".env" file. Add the line "OPENAI_API_KEY = < YOUR KEY HERE >" as the only related key needed for our program to follow. Replace < YOUR KEY HERE > with your key generated from the Open AI key generation step. You have now connected your personal Open AI account for use in our framework. Note, that only GPT-3.5 will be supported on the starting free plan.
 
+Offline quantized llama. Install here: https://github.com/ggerganov/llama.cpp
+To obtain models, you may use any gguf extension model. Here is where we find the ones for this experiment. https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF
+Take the model you downloaded, then you can drop it in the folder in "models" of llamacpp.
+Afterwards, make sure you change the llamacpp.py Python file to include the correct model name before running.
+
+
 Execution: Following correct setup of the steps above, we now will be able to connect to our robot and begin use. **(ADD MORE INFO)**
 
 # Example Results
