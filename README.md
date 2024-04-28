@@ -7,7 +7,7 @@ This repository houses the code and data for our project that integrates _______
 # Dependencies
 Our implementation was developed and tested on Ubuntu 22.04.4/Python 3.10.12.
 
-Libraries and their respective dependencies build form:
+Libraries and their respective dependencies build from:
 
 LLM Implementation: llama.cpp (llama-2-7b-chatQ5_K_S)
 
