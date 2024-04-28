@@ -25,6 +25,7 @@ To obtain models, you may use any gguf extension model. Here is where we find th
 Place llamacpp.py in the root directory of the llamacpp folder. This will allow you to access everything from llamacpp.
 Take the model you downloaded, then you can drop it in the folder in "models" of llamacpp.
 Afterwards, make sure you change the llamacpp.py Python file to include the correct model name before running.
+The offline LLM model will sometimes output a command along with some words or sentences. We can use a Regex parser to search for valid commands in the output string in order to extract the command.
 
 
 Execution: Following correct setup of the steps above, we now will be able to connect to our robot and begin use.
