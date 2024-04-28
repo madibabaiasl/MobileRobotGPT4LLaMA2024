@@ -22,6 +22,7 @@ OpenAI API Key Configuration: Again, after installing the required packages list
 
 Offline quantized llama. Install here: https://github.com/ggerganov/llama.cpp
 To obtain models, you may use any gguf extension model. Here is where we find the ones for this experiment. https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF
+Place llamacpp.py in the root directory of the llamacpp folder. This will allow you to access everything from llamacpp.
 Take the model you downloaded, then you can drop it in the folder in "models" of llamacpp.
 Afterwards, make sure you change the llamacpp.py Python file to include the correct model name before running.
 
