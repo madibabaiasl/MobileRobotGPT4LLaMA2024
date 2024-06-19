@@ -1,4 +1,3 @@
-// Robocup Symposium 2024
 // Arduino code written by:
 // Pascal Sikorski
 // Leendert Schrader
