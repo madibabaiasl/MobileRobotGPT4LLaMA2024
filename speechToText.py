@@ -1,4 +1,3 @@
-# Robocup Symposium 2024
 # VOSK wrapper written by:
 # Pascal Sikorski
 
