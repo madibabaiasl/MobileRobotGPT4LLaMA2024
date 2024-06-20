@@ -1,4 +1,3 @@
-# Robocup Symposium 2024
 # OpenAI prompting written by:
 # Kaleb Yu
 # Pascal Sikorski
