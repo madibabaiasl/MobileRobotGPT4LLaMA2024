@@ -1,4 +1,3 @@
-# Robocup Symposium 2024
 # Main controller written by:
 # Kaleb Yu
 # Pascal Sikorski
