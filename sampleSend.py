@@ -1,4 +1,3 @@
-# Robocup Symposium 2024
 # Test client code written by:
 # Pascal Sikorski
 
