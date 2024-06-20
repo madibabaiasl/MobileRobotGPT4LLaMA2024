@@ -1,4 +1,3 @@
-# Robocup Symposium 2024
 # Send function written by:
 # Pascal Sikorski
 # Kaleb Yu
