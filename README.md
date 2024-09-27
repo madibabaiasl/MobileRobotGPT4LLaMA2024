@@ -2,8 +2,6 @@
 
 Pascal Sikorski, Leendert Schrader, Kaleb Yu, Lucy Billadeau, Fnu Jinka Meenakshi, Naveena Mutharasan, Flavio Esposito, Hadi AliAkbarpour, Madi Babaiasl
 
-This repository houses the code and data for our project that integrates _______ to create ___. Our work demonstrates _____. This project aims to _____
-
 # Dependencies
 Our implementation was developed and tested on Ubuntu 22.04.4/Python 3.10.12.
 
