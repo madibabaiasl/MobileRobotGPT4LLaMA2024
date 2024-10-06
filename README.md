@@ -1,6 +1,7 @@
 # Deployment of NLP and LLM Techniques to Control Mobile Robots at the Edge: A Case Study Using GPT-4-Turbo and LLaMA 2
 
 Pascal Sikorski, Leendert Schrader, Kaleb Yu, Lucy Billadeau, Fnu Jinka Meenakshi, Naveena Mutharasan, Flavio Esposito, Hadi AliAkbarpour, Madi Babaiasl
+[Associated publication](https://arxiv.org/abs/2405.17670).
 
 # Dependencies
 Our implementation was developed and tested on Ubuntu 22.04.4/Python 3.10.12.
