@@ -39,10 +39,9 @@ Execution: Following correct setup of the steps above, we now will be able to co
 https://youtu.be/zHunM45R7AU
 
 # Citation (BibTeX)
-
-@article{sikorski2025mobile,
- author = {Sikorski, Pascal and Schrader, Leendert and Yu, Kaleb and Billadeau, Lucy and Meenakshi, Jinka and Mutharasan, Naveena and Esposito, Flavio and AliAkbarpour, Hadi and Babaiasl, Madi},
- title = {Deployment of Large Language Models to Control Mobile Robots at the Edge},
- booktitle = {3rd International Conference on Mechatronics,  Control and Robotics (ICMCR)},
- year = {2025},
-} 
+<pre id="codecell0"> @article{sikorski2025mobile,
+&nbsp;author = {Sikorski, Pascal and Schrader, Leendert and Yu, Kaleb and Billadeau, Lucy and Meenakshi, Jinka and Mutharasan, Naveena and Esposito, Flavio and AliAkbarpour, Hadi and Babaiasl, Madi},
+&nbsp;title = {Deployment of Large Language Models to Control Mobile Robots at the Edge},
+&nbsp;booktitle = {3rd International Conference on Mechatronics,  Control and Robotics (ICMCR)},
+&nbsp;year = {2025},
+} </pre>
