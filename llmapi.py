@@ -10,8 +10,8 @@ load_dotenv()
 client = OpenAI()
 
 instructions = """
-You are an assistance who will be given a string which was spoken. 
-From that natural language, I want you to think and interpret it so that the speakers intention is understood. 
+You are an assistant who will be given a string which was spoken. 
+I want you to think and interpret it so that the speakers intention is understood. 
 There are only four possible movement outputs, move forward, backward, left or right,these are assigned the letters f, b, l and r.
 Single parameter command 'f' is accepted (indefinite forward until object detected),
 Single parameter command 'l' is accepted (turn left 90 degrees),
@@ -46,7 +46,7 @@ Based on the users speech you should return the possible output based on the one
 You should interpret the text and pick the command along with the value if desired. 
 I want you to ONLY return the command. Do not say anything else other than those. 
 
-If you do not know which one is the best, then return "unknown". But feel free to interpret first.
+If you do not know which one is the best, then return "unknown". However, you should try your absolute hardest to find commands that work, you should almost never have to return "unknown", even with difficult commands.
 """
 
 def parsedGPT(userInput):
