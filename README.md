@@ -1,8 +1,8 @@
-# Deployment of Large Language Models to Control Mobile Robots at the Edge
+## Deployment of Large Language Models to Control Mobile Robots at the Edge
 
 Pascal Sikorski, Leendert Schrader, Kaleb Yu, Lucy Billadeau, Fnu Jinka Meenakshi, Naveena Mutharasan, Flavio Esposito, Hadi AliAkbarpour, Madi Babaiasl
 
-# Dependencies
+## Dependencies
 Our implementation was developed and tested on Ubuntu 22.04.4/Python 3.10.12.
 
 Libraries and their respective dependencies build from:
@@ -13,7 +13,7 @@ OpenAI Implementation: openai (1.12.0) json (2.0.9)
 
 Offline Speech Recogniton: vosk (0.3.45) pyaudio (0.2.11)
 
-# Usage
+## Usage
 To use the system, follow these steps:
 
 Robotic Setup and Configuration: Ensure the smart robot car is correctly setup and connected to your computing environment. A complete guide can be found here: https://www.elegoo.com/blogs/arduino-projects/elegoo-smart-robot-car-kit-v4-0-tutorial.
@@ -32,10 +32,10 @@ The offline LLM model will sometimes output a command along with some words or s
 
 Execution: Following correct setup of the steps above, we now will be able to connect to our robot and begin use.
 
-# Example Results
+## Example Results
 https://youtu.be/zHunM45R7AU
 
-# Citation (BibTeX)
+## Citation (BibTeX)
 ```bibtex
 @inproceedings{sikorski2025deployment,
   title={Deployment of Large Language Models to Control Mobile Robots at the Edge},
