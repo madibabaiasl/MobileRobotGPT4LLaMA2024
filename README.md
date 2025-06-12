@@ -2,9 +2,6 @@
 
 Pascal Sikorski, Leendert Schrader, Kaleb Yu, Lucy Billadeau, Fnu Jinka Meenakshi, Naveena Mutharasan, Flavio Esposito, Hadi AliAkbarpour, Madi Babaiasl
 
-
-[Associated publication](https://arxiv.org/abs/2405.17670).
-
 # Dependencies
 Our implementation was developed and tested on Ubuntu 22.04.4/Python 3.10.12.
 
@@ -39,9 +36,12 @@ Execution: Following correct setup of the steps above, we now will be able to co
 https://youtu.be/zHunM45R7AU
 
 # Citation (BibTeX)
-<pre id="codecell0"> @article{sikorski2025mobile,
-&nbsp;author = {Sikorski, Pascal and Schrader, Leendert and Yu, Kaleb and Billadeau, Lucy and Meenakshi, Jinka and Mutharasan, Naveena and Esposito, Flavio and AliAkbarpour, Hadi and Babaiasl, Madi},
-&nbsp;title = {Deployment of Large Language Models to Control Mobile Robots at the Edge},
-&nbsp;booktitle = {3rd International Conference on Mechatronics,  Control and Robotics (ICMCR)},
-&nbsp;year = {2025},
-} </pre>
+```bibtex
+@inproceedings{sikorski2025deployment,
+  title={Deployment of Large Language Models to Control Mobile Robots at the Edge},
+  author={Sikorski, Pascal and Schrader, Leendert and Yu, Kaleb and Billadeau, Lucy and Meenakshi, Jinka and Mutharasan, Naveena and Esposito, Flavio and AliAkbarpour, Hadi and Babaias, Madi},
+  booktitle={2025 3rd International Conference on Mechatronics, Control and Robotics (ICMCR)},
+  pages={19--24},
+  year={2025},
+  organization={IEEE}
+}
